@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-container">
+    <h1>Rock Paper Scissors</h1>
+    <p>Choose your move:</p>
+    <div class="choices">
+      <button onclick="play('rock')">Rock</button>
+      <button onclick="play('paper')">Paper</button>
+      <button onclick="play('scissors')">Scissors</button>
+    </div>
+    <div class="result">
+      <p id="playerChoice"></p>
+      <p id="computerChoice"></p>
+      <h2 id="gameResult"></h2>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Rock Paper Scissors Game | Created by <mark>MAHIN HASNAT</mark></p>
+  </footer>
+
+  <script>
+    function play(player) {
+      const choices = ['rock', 'paper', 'scissors'];
+      const computer = choices[Math.floor(Math.random() * choices.length)];
+
+      document.getElementById('playerChoice').textContent = `You chose: ${player}`;
+      document.getElementById('computerChoice').textContent = `Computer chose: ${computer}`;
+
+      let result = '';
+      if (player === computer) {
+        result = "It's a tie!";
+      } else if (
+        (player === 'rock' && computer === 'scissors') ||
+        (player === 'paper' && computer === 'rock') ||
+        (player === 'scissors' && computer === 'paper')
+      ) {
+        result = 'You win!';
+      } else {
+        result = 'You lose!';
+      }
+
+      document.getElementById('gameResult').textContent = result;
+    }
+  </script>
+</body>
+</html>

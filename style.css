@@ -1,0 +1,46 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.game-container {
+  padding: 50px 20px;
+  background-color: #fff;
+  max-width: 600px;
+  margin: 50px auto;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.choices button {
+  margin: 10px;
+  padding: 15px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  transition: background 0.3s;
+}
+
+.choices button:hover {
+  background-color: #45a049;
+}
+
+.result p,
+.result h2 {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+footer {
+  margin-top: 40px;
+  padding: 15px;
+  background-color: #eee;
+  font-size: 14px;
+  color: #555;
+}
